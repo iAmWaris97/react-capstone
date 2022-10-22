@@ -1,38 +1,67 @@
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import './Coins.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { fetchAssests } from '../../redux/Coins/coinsSlice';
 
-const Coins = () => (
-  <Container>
-    <Row>
-      <Col className="greeting">
-        <span>Filter Place Holder</span>
-      </Col>
-    </Row>
-    <Row>
-      <Col xs={6} className="coll">
-        <p>BTC</p>
-        <p>Bitcoin</p>
-        <p>Price: 19127.205</p>
-      </Col>
-      <Col xs={6} className="coll">
-        <p>BTC</p>
-        <p>Bitcoin</p>
-        <p>Price: 19127.205</p>
-      </Col>
-      <Col xs={6} className="coll">
-        <p>BTC</p>
-        <p>Bitcoin</p>
-        <p>Price: 19127.205</p>
-      </Col>
-      <Col xs={6} className="coll">
-        <p>BTC</p>
-        <p>Bitcoin</p>
-        <p>Price: 19127.205</p>
-      </Col>
-    </Row>
-  </Container>
-);
+const Coins = () => {
+  const dispatch = useDispatch();
+
+  const assets = useSelector((state) => state.coins);
+  useEffect(() => {
+    if (!assets.length) {
+      dispatch(fetchAssests());
+    }
+  });
+
+  const [searchcoin, setSearchcoin] = useState('');
+  const onSearch = (e) => {
+    setSearchcoin(e.target.value);
+  };
+
+  const searched = assets.filter(
+    (filteredCoin) => filteredCoin.name.toLowerCase().includes(searchcoin.toLowerCase())
+      || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
+  );
+
+  return (
+    <div className="container">
+      <div className="search">
+        <input
+          type="text"
+          value={searchcoin}
+          onChange={onSearch}
+        />
+      </div>
+      <div className="coins">
+        {searched.map((asset) => (
+          <div
+            className="coll"
+            key={`${asset.asset_id}${Math.random * 10}`}
+          >
+            <Link
+              className="coin-card"
+              Key={asset.asset_id}
+              to={`/coin/${asset.id}`}
+            >
+              <div className="price">
+                <p>{asset.price}</p>
+              </div>
+              <div>
+                <div>
+                  <img className="icon" src={asset.icon} alt={asset.name} />
+                </div>
+                <div className="asset-detail">
+                  <span className="asset-code">{asset.symbol}</span>
+                  <span className="asset-name">{asset.name}</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Coins;
