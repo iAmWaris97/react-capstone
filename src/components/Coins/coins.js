@@ -7,8 +7,7 @@ const Coins = () => (
   <Container>
     <Row>
       <Col className="greeting">
-        <span>Hello, Rich Man!</span>
-        <span>Moneyster</span>
+        <span>Filter Place Holder</span>
       </Col>
     </Row>
     <Row>

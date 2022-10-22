@@ -1,0 +1,17 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+}
+
+.greeting {
+  text-align: center;
+}
+
+.coll {
+  background-color: #4268b1;
+  border: solid 0.1px  black;
+  border-collapse: collapse;
+  text-align: center; 
+  color: #fff;
+  font-size: 3vh;
+}
