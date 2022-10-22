@@ -7,7 +7,7 @@ import Home from '../components/Coins/Coins';
 
 describe('Testing coins component if: ', () => {
   it('It renderes the coins', () => {
-    const tree = render(
+    const bundle = render(
       <React.StrictMode>
         <Provider store={store}>
           <Router>
@@ -16,6 +16,6 @@ describe('Testing coins component if: ', () => {
         </Provider>
       </React.StrictMode>,
     );
-    expect(tree).toMatchSnapshot();
+    expect(bundle).toMatchSnapshot();
   });
 });
