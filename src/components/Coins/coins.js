@@ -51,9 +51,9 @@ const Coins = () => {
                 <div>
                   <img className="icon" src={asset.icon} alt={asset.name} />
                 </div>
-                <div className="asset-detail">
-                  <span className="asset-code">{asset.symbol}</span>
-                  <span className="asset-name">{asset.name}</span>
+                <div className="coin-detail">
+                  <span className="coin-code">{asset.symbol}</span>
+                  <span className="coin-name">{asset.name}</span>
                 </div>
               </div>
             </Link>
