@@ -5,3 +5,7 @@ a {
 li {
   list-style-type: none;
 }
+
+body {
+  background-color: #5788e5;
+}
