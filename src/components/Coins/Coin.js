@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { fetchDetail } from '../../redux/Coins/coinSlice';
+import './Coin.css';
 
 const Coin = () => {
   const data = useParams();
@@ -12,7 +13,7 @@ const Coin = () => {
   });
 
   return (
-    <div className="container">
+    <div className="coin-container">
       <div className="info">
         <img src={detail.icon} alt={detail.name} />
         <p className="detail-price">

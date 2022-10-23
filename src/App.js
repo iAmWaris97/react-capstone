@@ -9,10 +9,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Coins />} />
-        <Route path="/coin/:id/" element={<Coin />} />
-      </Routes>
+      <div className="routes-container">
+        <Routes>
+          <Route path="/" element={<Coins />} />
+          <Route path="/coin/:id/" element={<Coin />} />
+        </Routes>
+      </div>
     </div>
   );
 }

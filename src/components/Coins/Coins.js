@@ -29,18 +29,19 @@ const Coins = () => {
       <div className="search">
         <input
           type="text"
+          placeholder="Search..."
           value={searchcoin}
           onChange={onSearch}
         />
       </div>
       <div className="coins">
-        {searched.map((asset) => (
+        {searched.map((asset, index) => (
           <div
-            className="coll"
+            className={(index % 2 === 0) ? 'odd-bg coin-card' : 'coin-card'}
             key={`${asset.asset_id}${Math.random * 10}`}
           >
             <Link
-              className="coin-card"
+              className="one-coin"
               Key={asset.asset_id}
               to={`/coin/${asset.id}`}
             >
@@ -48,13 +49,10 @@ const Coins = () => {
                 <p>{asset.price}</p>
               </div>
               <div>
-                <div>
-                  <img className="icon" src={asset.icon} alt={asset.name} />
-                </div>
-                <div className="coin-detail">
-                  <span className="coin-code">{asset.symbol}</span>
-                  <span className="coin-name">{asset.name}</span>
-                </div>
+                <img className="icon" src={asset.icon} alt={asset.name.substring(0, 2)} />
+              </div>
+              <div className="coin-detail">
+                <p className="coin-code">{asset.symbol}</p>
               </div>
             </Link>
           </div>
