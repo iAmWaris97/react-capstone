@@ -1,8 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-// eslint-disable-next-line import/extensions
-import Coins from './components/Coins/Coins.js';
+import Coins from './components/Coins/Coins';
 import Coin from './components/Coins/Coin';
 
 function App() {
