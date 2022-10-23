@@ -20,7 +20,7 @@
 
 [Live Demo](https://moneyster.netlify.app/)
 
-[Project Explaination](https://space-owners-hub.netlify.app/)
+[Project Explaination](https://www.loom.com/share/133e2229537f4b439f19e56c2b9dce52)
 
 ## Getting Started
 
