@@ -1,3 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5788e4;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.search input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #5788e4;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus {
+  border: 2px solid #fff;
+  outline: none;
+}
+
 .coins {
-  background-color: #fff;
+  columns: 2;
+  gap: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.coin-card {
+  width: 100%;
+  min-height: 200px;
+  background-color: #5384e1;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+
+.odd-bg {
+  background-color: #4c7bd3;
+}
+
+.one-coin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+img.icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.price,
+.coin-code {
+  color: #fff;
+  font-weight: bold;
 }
