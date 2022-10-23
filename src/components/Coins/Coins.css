@@ -37,6 +37,7 @@ input:focus {
 
 .coin-card {
   width: 100%;
+  display: inline-block;
   min-height: 200px;
   background-color: #5384e1;
   padding: 25px 0;
@@ -44,7 +45,7 @@ input:focus {
 }
 
 .odd-bg {
-  background-color: #4c7bd3;
+  background-color: #2a4983;
 }
 
 .one-coin {

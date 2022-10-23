@@ -75,6 +75,8 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 
 > Thanks to all the developers whose code, documentations, and efforts helped us doing this project.
 
+> Design is inspired from [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

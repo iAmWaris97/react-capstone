@@ -37,7 +37,7 @@ const Coins = () => {
       <div className="coins">
         {searched.map((asset, index) => (
           <div
-            className={(index % 2 === 0) ? 'odd-bg coin-card' : 'coin-card'}
+            className={(index % 2 === 1) ? 'odd-bg coin-card' : 'coin-card'}
             key={`${asset.asset_id}${Math.random * 10}`}
           >
             <Link
