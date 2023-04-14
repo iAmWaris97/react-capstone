@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+}
+
+.navbar {
+  background-color: #4369b2;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.back a svg {
+  color: white;
+  height: 35px;
+  width: 35px;
+}
+
+.app-title {
+  font-weight: 600;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.app-icons {
+  gap: 10px;
+}
